@@ -102,8 +102,16 @@ body {
 
 /* ================================================ */
 
+.self.main__nav__container {
+    margin: 0;
+}
+
 .main__nav__container {
     border-bottom: 2px solid #E0E0E0;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: white;
 }
 
 .nav__header {
@@ -206,27 +214,32 @@ body {
     color: white;
     font-family: 'Russo One', sans-serif;
     position: absolute;
-    top: 229px;
+    top: 883px;
     left: 861px;
     letter-spacing: 4px;
     font-size: xx-large;
+
 }
 
-.main__magazine__container {
-    position: absolute;
+.self.main__magazine__container {
+    box-shadow: 0 5px 50px -35px #333;
+}
+
+.magazine__container {
     background-image: url(/img/метка/Новости.jpg);
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y: 200px;
+    background-position-y: 140px;
 }
+
+.main__magazine__container {}
 
 .places {
     margin-bottom: 131px;
 }
 
 .places__caption {
-    display: -webkit-box;
-    display: -ms-flexbox;
+
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -257,7 +270,6 @@ body {
 }
 
 .places__cards {
-    display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
     grid-template-columns: repeat(6, 1fr);
@@ -284,9 +296,7 @@ body {
 }
 
 .places__card:hover .places__card-pic {
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
+    transform: scale(1.15);
 }
 
 .places__card-title {
@@ -300,31 +310,25 @@ body {
 }
 
 .places__card_size_lg {
-    -ms-grid-column-span: 3;
     grid-column: span 3;
 }
 
 .places__card_size_sm {
-    -ms-grid-column-span: 2;
     grid-column: span 2;
 }
 
 .places__card-pic {
     width: 100%;
-    -webkit-transition: .15s all;
-    -o-transition: .15s all;
     transition: .15s all;
 }
 
 .places__card-pic_size_lg {
     height: 354px;
-    -o-object-fit: cover;
     object-fit: cover;
 }
 
 .places__card-pic_size_sm {
     height: 283px;
-    -o-object-fit: cover;
     object-fit: cover;
 }
 
@@ -342,3 +346,246 @@ body {
 }
 
 /* ============================================================ Places Styles end */
+
+
+/* =================================== ТОВАРИ ======================= */
+
+.main__tovar__container {
+    background-image: url(/img/метка/long.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 200px;
+}
+
+.tovar__container {}
+
+.main_text h2 {
+    margin-top: 250px;
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+    color: white;
+    letter-spacing: 5px;
+}
+
+
+/* ====================== ===================== CARD ==================== */
+
+
+/* =============================================== CARD */
+
+.self.main__card {
+    margin-top: 130px;
+}
+
+.main__type__container h2 {
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+}
+
+
+.cards {
+    display: flex;
+}
+
+.self.card {
+    padding: 0;
+}
+
+.card {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    width: 25%;
+
+}
+
+.main__tovar__container .card:hover {
+    border-radius: 10px;
+    /* border: 3px solid red;
+    transition: 1.5s;
+    transform: rotate(1turn);
+    padding: 0px 0px 0px 0px;
+    cursor: pointer; */
+}
+
+.main__tovar__container button {
+    margin-top: 50px;
+    margin-left: 690px;
+    margin-bottom: 200px;
+}
+
+.main__tovar__container button a {
+    padding: 25px 100px 25px 100px;
+    font-family: 'Russo One', sans-serif;
+    color: white;
+    border-radius: 15px;
+    background-color: #333;
+    font-size: 28px;
+}
+
+.main__tovar__container button a:hover {
+    color: white;
+    background-color: rgb(141, 68, 68);
+
+}
+
+.main__tovar__container button:hover {
+    transform: scale(1.2);
+    transition: 1.1s;
+}
+
+.card img {
+    margin: 0;
+    padding: 0;
+    height: 310px;
+    width: 310px;
+    margin-left: 50px;
+    margin-top: 23px;
+}
+
+.main__description {}
+
+.main__description span {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Russo One', sans-serif;
+    color: #303030;
+    display: flex;
+    justify-content: center;
+}
+
+.main__tovar__container .main__description:hover {}
+
+.main__description p {
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* ================================== PAPAPA  ======================================= */
+
+.main__tovar__container .main__description {}
+
+.main__tovar__container .main__description span {
+    transition: 0.2s;
+    transform: translateY(20px);
+}
+
+.main__tovar__container .main__description p {
+    transition: 0.2s;
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+    background-color: red;
+    padding: 20px 60px 20px 60px;
+    border-radius: 0 70px 0 70px;
+    color: white;
+}
+
+.main__tovar__container .main__description p:hover {
+    background-color: #303030;
+    border-radius: 70px 0 70px 0;
+    transition: .8s;
+}
+
+.main__tovar__container .main__description:before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    bottom: 5%;
+    left: 5%;
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+    transition: 0.2s;
+    transform: scaleX(0);
+}
+
+
+.main__tovar__container .main__description:after {
+    content: '';
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    bottom: 5%;
+    left: 5%;
+    border-left: solid 2px;
+    border-right: solid 2px;
+    transition: 0.2s;
+    transform: scaleY(0);
+}
+
+.main__tovar__container .main__description:hover:before,
+.main__tovar__container .main__description:hover:after {
+    transform: scale(1);
+}
+
+.main__tovar__container .main__description:hover span,
+.main__tovar__container .main__description:hover p {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* =============================================== BREND ==================================== */
+
+.main__brend__container {
+    background-image: url(/img/метка/Последние.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 100px;
+
+}
+
+.self.main__brend__container {
+    box-shadow: 0 5px 50px -35px #333;
+}
+
+.tovar__container {}
+
+.main__brend__container .main h2 {
+    margin-top: 90px;
+    opacity: 0.8;
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+    color: rgb(255, 255, 255);
+    letter-spacing: 5px;
+}
+
+.main__brend__container .groups {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__brend__container .groups .arrow_one {
+    background-color: #595959;
+    position: absolute;
+    left: 230px;
+    border-radius: 15px;
+    top: 110px;
+    padding: 11px 19px 0px 12px;
+}
+
+.main__brend__container .groups .arrow_two {
+    background-color: #595959;
+    position: absolute;
+    right: 270px;
+    border-radius: 15px;
+    top: 110px;
+    padding: 11px 19px 0px 12px;
+}
+
+.main__brend__container .image {
+    margin-right: 120px;
+    padding-bottom: 100px;
+}
+
+.main__brend__container .image img {
+    margin-left: 50px;
+    margin-right: 25px;
+    margin-top: 60px;
+}
+
+/* =========================================== FOOTER ======================================== */
