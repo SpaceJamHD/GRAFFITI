@@ -97,7 +97,7 @@ body {
 }
 
 .self.active {
-    color: rgb(201, 0, 0);
+    color: rgb(255, 0, 0);
 }
 
 /* ================================================ */
@@ -127,7 +127,7 @@ body {
 }
 
 .nav__header .icons span {
-    color: rgb(153, 0, 0);
+    color: rgb(255, 0, 0);
     transition: 1s;
     position: absolute;
     right: 10px;
@@ -214,7 +214,7 @@ body {
     color: white;
     font-family: 'Russo One', sans-serif;
     position: absolute;
-    top: 883px;
+    top: 760px;
     left: 861px;
     letter-spacing: 4px;
     font-size: xx-large;
@@ -589,3 +589,59 @@ body {
 }
 
 /* =========================================== FOOTER ======================================== */
+
+footer {
+    background: #2C2C2C;
+    margin: 119px 0 0 0;
+}
+
+.footer__item {
+
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.footer__logo img {
+    margin-top: 25px;
+}
+
+.footer__logo {
+    width: 35%;
+
+}
+
+.footer__nav {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.footer__menu-title {
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Russo One', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.footer__menu {}
+
+.footer__menu-link {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.footer__menu-link:hover,
+.footer__menu-link:focus,
+.footer__menu-link:active {
+    opacity: .75;
+}
