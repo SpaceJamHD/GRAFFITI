@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 64px;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 48px;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 40px;
+}
+
+h4 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+h5 {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+body {
+    /* background: #E5E5E5; */
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+
+}
+
+/* .container {
+    padding: 0 20px 0 60px;
+    flex: 1;
+} */
+
+.main__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* border: 3px solid rgb(138, 23, 23); */
+}
+
+.self.main__wrapper {
+    width: 100%;
+}
+
+.main__wrapper div {
+    /* border: 3px solid rgb(138, 23, 23); */
+    box-sizing: border-box;
+    padding: 4px;
+    margin: 4px;
+    min-height: 40px;
+}
+
+.main__header__container {
+    padding: 0 20px 0 60px;
+    flex: 1;
+}
+
+.self.content__container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.self.active {
+    color: rgb(255, 0, 0);
+}
+
+/* ================================================ */
+
+.self.main__nav__container {
+    margin: 0;
+}
+
+.main__nav__container {
+    border-bottom: 2px solid #E0E0E0;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+}
+
+.nav__header {
+    display: flex;
+    align-items: center;
+}
+
+.nav__header .icons {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+}
+
+.nav__header .icons span {
+    color: rgb(255, 0, 0);
+    transition: 1s;
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    font-size: 12.154px;
+}
+
+.nav__header .icons i {
+    margin: 0 17px 0 0;
+    opacity: 0.5;
+}
+
+.nav__header .icons i:hover {
+    opacity: 1;
+    color: rgb(0, 0, 255);
+}
+
+
+.nav__header .count {
+    margin: 0;
+}
+
+
+
+.nav__logo a img {
+    margin: -15px;
+    height: 40px;
+}
+
+.nav__header .icons_2 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    position: relative;
+}
+
+.nav__menu ul {
+    display: flex;
+    justify-content: center;
+    margin-left: 350px;
+}
+
+.nav__menu ul li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav__menu ul li a {
+    color: black;
+    font-family: 'Russo One', sans-serif;
+}
+
+.nav__menu ul li a:hover {
+    color: rgb(124, 0, 0);
+}
+
+/* ======================================== Menu =========================== */
+
+
+.hidden-menu {
+    display: block;
+    position: fixed;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    width: 200px;
+    background-color: #2b343c;
+    height: 100%;
+    top: 0;
+    left: -200px;
+    transition: left .2s;
+    z-index: 2;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.hidden-menu li a {
+    text-decoration: none;
+    color: #cacaca;
+}
+
+.hidden-menu li a:hover {
+    color: #fff;
+}
+
+
+.hidden-menu-ticker {
+    display: none;
+}
+
+
+.btn-menu {
+    color: #fff;
+    background-color: #fff;
+    padding: 2px;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    transition: left .23s;
+    z-index: 3;
+    width: 20px;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+
+
+.btn-menu span {
+    display: block;
+    height: 2px;
+    background-color: #2b343c;
+    margin: 5px 0 0;
+    transition: all .1s linear .23s;
+    position: relative;
+}
+
+.btn-menu span.first {
+    margin-top: 0;
+}
+
+
+.hidden-menu-ticker:checked~.btn-menu {
+    left: 160px;
+    background-color: #2b343c;
+}
+
+
+.hidden-menu-ticker:checked~.hidden-menu {
+    left: 0;
+}
+
+.hidden-menu-ticker:checked~.btn-menu span.first {
+    transform: rotate(45deg);
+    top: 7px;
+    background-color: #fff;
+}
+
+.hidden-menu-ticker:checked~.btn-menu span.second {
+    opacity: 0;
+}
+
+.hidden-menu-ticker:checked~.btn-menu span.third {
+    transform: rotate(-45deg);
+    top: -7px;
+    background-color: #fff;
+}
+
+
+header {
+    background-color: #fff;
+    color: #2487ca;
+    text-align: center;
+    padding: 5px;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+/* =================================== ТОВАРИ ======================= */
+
+.main__tovar__container {
+    background-image: url(/img/метка/long.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 200px;
+}
+
+.tovar__container {}
+
+.main_text h2 {
+    margin-top: 150px;
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+    color: rgb(0, 0, 0);
+    letter-spacing: 5px;
+}
+
+
+/* ====================== ===================== CARD ==================== */
+
+
+/* =============================================== CARD */
+
+.self.main__card {
+    margin-top: 50px;
+}
+
+.main__type__container h2 {
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+}
+
+
+.cards {
+    display: flex;
+}
+
+.self.card {
+    padding: 0;
+}
+
+.card {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    width: 25%;
+
+}
+
+.main__tovar__container .card:hover {
+    border-radius: 10px;
+    /* border: 3px solid red;
+    transition: 1.5s;
+    transform: rotate(1turn);
+    padding: 0px 0px 0px 0px;
+    cursor: pointer; */
+}
+
+.main__tovar__container button {
+    margin-top: 50px;
+    margin-left: 690px;
+    margin-bottom: 200px;
+}
+
+.main__tovar__container button a {
+    padding: 25px 100px 25px 100px;
+    font-family: 'Russo One', sans-serif;
+    color: white;
+    border-radius: 15px;
+    background-color: #333;
+    font-size: 28px;
+}
+
+.main__tovar__container button a:hover {
+    color: white;
+    background-color: rgb(141, 68, 68);
+
+}
+
+.main__tovar__container button:hover {
+    transform: scale(1.2);
+    transition: 1.1s;
+}
+
+.card img {
+    margin: 0;
+    padding: 0;
+    height: 310px;
+    width: 310px;
+    margin-left: 50px;
+    margin-top: 23px;
+}
+
+.main__description {}
+
+.main__description span {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Russo One', sans-serif;
+    color: #303030;
+    display: flex;
+    justify-content: center;
+}
+
+.main__tovar__container .main__description:hover {}
+
+.main__description p {
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* ================================== PAPAPA  ======================================= */
+
+.main__tovarii__container .main__description {}
+
+.main__tovarii__container .main__description span {
+    transition: 0.2s;
+    transform: translateY(20px);
+}
+
+.main__tovarii__container .main__description a p {
+    transition: 0.2s;
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+    background-color: red;
+    padding: 20px 60px 20px 60px;
+    border-radius: 0 70px 0 70px;
+    color: white;
+    font-size: 28px;
+}
+
+.main__tovarii__container .main__description p:hover {
+    background-color: #303030;
+    border-radius: 70px 0 70px 0;
+    transition: .8s;
+}
+
+.main__tovarii__container .main__description:before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    bottom: 5%;
+    left: 5%;
+    transition: 0.2s;
+    transform: scaleX(0);
+}
+
+
+.main__tovarii__container .main__description:after {
+    content: '';
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    bottom: 5%;
+    left: 5%;
+    transition: 0.2s;
+    transform: scaleY(0);
+}
+
+.main__tovarii__container .main__description:hover:before,
+.main__tovarii__container .main__description:hover:after {
+    transform: scale(1);
+}
+
+.main__tovarii__container .main__description:hover span,
+.main__tovarii__container .main__description:hover p {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.main__tovarii__container button {
+    margin-top: 50px;
+    margin-left: 690px;
+    margin-bottom: 200px;
+}
+
+.main__tovarii__container button a {
+    padding: 25px 100px 25px 100px;
+    font-family: 'Russo One', sans-serif;
+    color: white;
+    border-radius: 15px;
+    background-color: #333;
+    font-size: 28px;
+}
+
+.main__tovarii__container button a:hover {
+    color: white;
+    background-color: rgb(141, 68, 68);
+
+}
+
+.main__tovarii__container button:hover {
+    transform: scale(1.2);
+    transition: 1.1s;
+}
+
+/* =========================================== FOOTER ======================================== */
+
+footer {
+    background: #2C2C2C;
+    margin: 119px 0 0 0;
+}
+
+.footer__item {
+
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.footer__logo img {
+    margin-top: 25px;
+}
+
+.footer__logo {
+    width: 35%;
+
+}
+
+.footer__nav {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.footer__menu-title {
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Russo One', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.footer__menu {}
+
+.footer__menu-link {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.footer__menu-link:hover,
+.footer__menu-link:focus,
+.footer__menu-link:active {
+    opacity: .75;
+}
