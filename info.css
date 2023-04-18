@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 64px;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 48px;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 40px;
+}
+
+h4 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+h5 {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+body {
+    /* background: #E5E5E5; */
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+
+}
+
+/* .container {
+    padding: 0 20px 0 60px;
+    flex: 1;
+} */
+
+.main__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* border: 3px solid rgb(138, 23, 23); */
+}
+
+.self.main__wrapper {
+    width: 100%;
+}
+
+.main__wrapper div {
+    /* border: 3px solid rgb(138, 23, 23); */
+    box-sizing: border-box;
+    padding: 4px;
+    margin: 4px;
+    min-height: 40px;
+}
+
+.main__header__container {
+    padding: 0 20px 0 60px;
+    flex: 1;
+}
+
+.self.content__container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.self.active {
+    color: rgb(255, 0, 0);
+}
+
+/* ================================================ */
+
+.self.main__nav__container {
+    margin: 0;
+}
+
+.main__nav__container {
+    border-bottom: 2px solid #E0E0E0;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+}
+
+.nav__header {
+    display: flex;
+    align-items: center;
+}
+
+.nav__header .icons {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+}
+
+.nav__header .icons span {
+    color: rgb(255, 0, 0);
+    transition: 1s;
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    font-size: 12.154px;
+}
+
+.nav__header .icons i {
+    margin: 0 17px 0 0;
+    opacity: 0.5;
+}
+
+.nav__header .icons i:hover {
+    opacity: 1;
+    color: rgb(0, 0, 255);
+}
+
+
+.nav__header .count {
+    margin: 0;
+}
+
+
+
+.nav__logo a img {
+    margin: -15px;
+    height: 40px;
+}
+
+.nav__header .icons_2 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    position: relative;
+}
+
+.nav__menu ul {
+    display: flex;
+    justify-content: center;
+    margin-left: 350px;
+}
+
+.nav__menu ul li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav__menu ul li a {
+    color: black;
+    font-family: 'Russo One', sans-serif;
+}
+
+.nav__menu ul li a:hover {
+    color: rgb(124, 0, 0);
+}
