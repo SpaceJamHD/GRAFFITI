@@ -551,3 +551,49 @@ footer {
 .footer__menu-link:active {
     opacity: .75;
 }
+
+
+/* =============================== ADAPT ============================== */
+
+@media (max-width: 1200px) {
+    .main__nav__container {
+        border-bottom: 2px solid #E0E0E0;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        background-color: white;
+    }
+
+    .nav__menu ul {
+        display: flex;
+        justify-content: center;
+        margin-left: 150px;
+    }
+
+
+    /* ============================ tovar============================ */
+
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        width: 49.2%;
+
+    }
+
+    .card img {
+        margin-left: 100px;
+    }
+
+    .main__tovarii__container button {
+        margin-top: 50px;
+        margin-left: 350px;
+        margin-bottom: 350px;
+    }
+
+}
